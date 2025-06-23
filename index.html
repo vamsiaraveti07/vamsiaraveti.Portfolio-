@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vamsi Araveti| Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <style>
+    /* ========== Global Styles ========== */
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{
+      font-family:'Poppins',sans-serif;
+      background:#111;
+      color:#fff;
+      scroll-behavior:smooth;
+    }
+    h2{font-size:2rem;margin-bottom:1.5rem;text-align:center}
+    .btn{
+      display:inline-block;padding:10px 25px;margin-top:1rem;
+      background:#0ff;color:#000;border-radius:25px;text-decoration:none
+    }
+    section{padding:4rem 2rem}
+
+    /* ========== Header ========== */
+    header{background:#000;position:sticky;top:0;z-index:1000}
+    nav{display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem}
+    .logo{font-size:1.5rem;color:#0ff}
+    .nav-links{list-style:none;display:flex;gap:1.5rem}
+    .nav-links a{color:#fff;text-decoration:none;transition:.3s}
+    .nav-links a:hover{color:#0ff}
+
+    /* ========== Hero ========== */
+    .hero{
+      height:100vh;display:flex;justify-content:center;align-items:center;
+      background:linear-gradient(135deg,#000,#333)
+    }
+    .hero-content{text-align:center}
+    .hero-content h1{font-size:3rem;margin-bottom:.5rem}
+    .hero-content h1 span{color:#0ff}
+
+    /* ========== About ========== */
+    .about-container{display:flex;flex-direction:column;align-items:center;gap:1rem}
+    .about-container img{
+      width:250px;height:250px;border-radius:50%;border:3px solid #0ff
+    }
+    .about-container p{max-width:1200px;text-align:center}
+
+    /* ========== Skills ========== */
+    .skills {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
+    }
+    
+    .skills-container {
+      display: flex;
+      flex-direction: row;  /* 👈 This ensures left-to-right layout */
+      flex-wrap: wrap;      /* 👈 Wraps to next line if space runs out */
+      justify-content: center;
+      gap: 2rem;
+      padding: 3rem 1rem;
+      box-shadow: 0 0 15px rgba(0,255,255,0.2);
+      width: 100%;
+      margin: auto;
+    }
+    
+    
+    .skill-icon {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 120px;
+    }
+    
+    .icon-circle {
+      background-color: #222;
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      box-shadow: 0 0 15px rgba(0,255,255,0.2);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .icon-circle img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    
+    .skill-icon span {
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+    
+    .skill-icon:hover .icon-circle {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px #0ff;
+    }
+    
+    
+ /* ========== Certifications & Achievements ========== */
+.cert-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  
+  padding: 3rem 1rem;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0,255,255,0.2);
+  transition: all 0.3s ease;
+}
+.cert-card {
+  background: linear-gradient(145deg, #222, #333);
+  border-radius: 15px;
+  overflow: hidden;
+  width: 400px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.cert-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px rgba(0,255,255,0.4);
+}
+.cert-card img {
+  width: 100%;
+  height: auto;
+  border-bottom: 2px solid #0ff;
+}
+.cert-card figcaption {
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* ========== Academic Timeline ========== */
+.academic {
+  padding: 60px 20px;
+  background-color: #0d0d1f;
+  color: #fff;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+#academic h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #00ffe0;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: center;
+  background-color: #1e1e2e;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.timeline-item:hover {
+  transform: scale(1.02);
+}
+
+.tl-logo {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  margin-right: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 4px;
+}
+
+.tl-content {
+  text-align: left;
+}
+
+.tl-date {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.tl-content h3 {
+  font-size: 1.2rem;
+  margin: 5px 0;
+  color: #00fff7;
+}
+
+.tl-content p {
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+/* ========== Skills with Icons ========== */
+
+.skills-container {
+
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5rem;
+  padding: 9rem 1rem;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0,255,255,0.2);
+}
+
+.skill-icon {
+
+  border-radius: 15px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(0,255,255,0.1);
+}
+.skill-icon:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,255,255,0.3);
+}
+.skill-icon img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 0.5rem;
+}
+.skill-icon span {
+  display: block;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+/* ===== PROJECT SECTION ===== */
+#projects {
+  background-color: #121212;
+  padding: 60px 20px;
+  color: #fff;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+#projects h2 {
+  font-size: 2.8rem;
+  margin-bottom: 40px;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+/* Flex container for projects */
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Project Card */
+.project-card {
+  background: #1e1e2f;
+  border-radius: 18px;
+  padding: 24px;
+  max-width: 360px;
+  flex: 1 1 300px;
+  box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.5),
+              -4px -4px 12px rgba(0, 255, 255, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: -40%;
+  left: -40%;
+  width: 180%;
+  height: 180%;
+  background: radial-gradient(circle, rgba(0, 255, 255, 0.1), transparent 70%);
+  transform: rotate(45deg);
+  pointer-events: none;
+}
+
+.project-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #00fff7;
+  text-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
+}
+
+.project-card p {
+  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+/* Modern Button */
+.project-card a {
+  display: inline-block;
+  margin-top: auto;
+  background: linear-gradient(to right, #00fff0, #00c2ff);
+  color: #000;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 20px rgba(0, 255, 255, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 25px rgba(0, 255, 255, 0.6);
+}
+
+/* Hover effect on card */
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
+}
+/*===
+
+/* ===== LANGUAGES SECTION ===== */
+.languages-section {
+ 
+  padding: 60px 20px;
+  text-align: center;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.languages-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+}
+
+.languages-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+
+.languages-list span {
+  background: linear-gradient(to right, #00fff0, #00c2ff);
+  color: #000;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 255, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.languages-list span:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 255, 255, 0.4);
+}
+
+
+
+    /* ========== Resume ========== */
+    #resume{text-align:center}
+/* ===== TOOLS SECTION ===== */
+.tools-section {
+
+  padding: 60px 20px;
+  text-align: center;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.tools-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #00ffe0;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+}
+
+/* Grid Layout */
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+/* Tool Card Style */
+.tool-card {
+ 
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 25px rgba(0, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(0, 255, 255, 0.1);
+}
+
+.tool-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
+}
+
+/* Icon Styling */
+.tool-card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 12px;
+  filter: drop-shadow(0 0 5px rgba(0, 255, 255, 0.2));
+}
+
+/* Tool Name */
+.tool-card span {
+  font-size: 1rem;
+  color: #eee;
+  font-weight: 600;
+}
+
+/* ========== Contact ========== */
+#contact-modern {
+  background: #111010;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.contact-container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.image-left,
+.image-right {
+  width: 15%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 30px;
+  box-shadow:
+    0 0 20px rgba(0, 255, 255, 0.3),
+    0 0 40px rgba(0, 128, 255, 0.2),
+    0 0 80px rgba(128, 0, 255, 0.2);
+}
+
+.image-left {
+  background-image: url('images/vamsi.jpg');
+  margin: 2rem 1rem 2rem 2rem;
+}
+
+.image-right {
+  background-image: url('images/vamsi1.jpg');
+  margin: 2rem 2rem 2rem 1rem;
+}
+
+.name-columns {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  gap: 2rem;
+  padding: 2rem;
+  font-size: 7rem;
+  font-weight:bolder;
+  color: #0bfbff;
+  text-shadow: 2px 2px 10px rgba(255, 0, 191, 0.788);
+  line-height: 7.5rem;
+  font-style:normal;
+}
+.name-columns .column {
+  text-align: center;
+}
+
+
+.contact-content {
+  flex: 1;
+  padding: 60px 40px;
+  background: #111010;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: inset 0 0 50px rgba(0, 255, 255, 0.1);
+}
+
+.contact-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0,255,255,0.4);
+}
+
+.contact-info {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  color: #d0e7ff;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: #003060;
+  color: #fff;
+  border: none;
+  padding: 14px;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-shadow: 0 0 15px rgba(0, 200, 255, 0.1);
+}
+
+.contact-form button {
+  margin-top: 10px;
+  padding: 12px;
+  background: linear-gradient(135deg, #00cfff, #007bff);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(0, 200, 255, 0.4);
+}
+
+.contact-socials {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.contact-socials a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #d0e7ff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contact-socials a:hover {
+  color: #00cfff;
+  transform: translateX(5px);
+}
+
+.contact-socials img {
+  width: 20px;
+  height: 20px;
+  filter: drop-shadow(0 0 4px rgba(0, 255, 255, 0.6));
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .image-left, .image-right {
+    display: none;
+  }
+  .name-vertical {
+    display: none;
+  }
+}
+    /* ========== Footer ========== */
+    footer{background:#000;text-align:center;padding:1rem 0;font-size:.9rem;margin-top:3rem}
+  </style>
+</head>
+<body>
+  <!-- ===== HEADER ===== -->
+  <header>
+    <nav>
+      <h2 class="logo">Vamsi Araveti</h2>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certifications">Achievements</a></li>
+        <li><a href="#academic">Academic</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Hello, I'm <span>Araveti Vamsi</span></h1>
+      <p>2022 - 2026 (Batch)</p>
+      <a href="#about" class="btn">About Me</a>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="about-container">
+      <img src="images\WhatsApp Image 2024-07-05 at 12.38.33_7dfdf7d2.jpg" alt="Vamsi portrait" />
+      <p>As a software engineer with a passion for coding, I am always striving to learn and improve my skills. I have experience with various programming languages and technologies, and I enjoy working on challenging projects that push me out of my comfort zone. Through my portfolio site, I hope to showcase some of my work and give you a glimpse into my skills and abilities.</p>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+   
+  <section id="skills">
+    <h2 style="color: white; text-align: center;">Technical Skills</h2>
+  
+    <div class="skills-container"> <!-- 🔧 THIS is the missing wrapper -->
+      <div class="skill-icon">
+        <div class="icon-circle" style="background-image: url('images/python-logo-4k-i6.jpg');"></div>
+        <span>PYTHON</span>
+      </div>
+  
+      <div class="skill-icon">
+        <div class="icon-circle" style="background-image: url('images/java logo.png');"></div>
+        <span>JAVA(Basics)</span>
+      </div>
+  
+      <div class="skill-icon">
+        <div class="icon-circle" style="background-image: url('images/FIAVGJRHHS9LGN0.webp');"></div>
+        <span>HTML</span>
+      </div>
+  
+      <div class="skill-icon">
+        <div class="icon-circle" style="background-image: url('images/css3-151017183412-lva1-app6891-thumbnail-4.webp');"></div>
+        <span>CSS</span>
+      </div>
+      <div class="skill-icon">
+        <div class="icon-circle" style="background-image: url('images/OIP.webp');"></div>
+        <span>BOOTSTRAP</span>
+      </div>
+      <div class="skill-icon">
+        <div class="icon-circle" style="background-image: url('images/js.png');"></div>
+        <span>JAVASCRIPT</span>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-container">
+      <article class="project-card">
+        <h3>Talkify– Real-Time Speech-to-Text and Text-to-Speech </h3>
+        <p>A web-based application that provides real-time speech-to-text and text-to-speech services using Azure Cognitive
+          Services. Enhance communication and accessibility by converting voice input into text and typed input into natural
+         sounding speech.</p>
+         <p>Tech Stack: HTML, CSS, JavaScript, Azure Speech SDK, Azure Cognitive Services (Speech API).</p>
+        <a href="https://github.com/vamsiaraveti07/Talkify-Real-time-speech-platform-" target="_blank">View GitHub →</a>
+      </article>
+      <article class="project-card">
+        <h3>E-Commerce Product Listing App </h3>
+        <p>Developed a FastAPI powered back-end for an e-Commerce interface with
+          product listing and add-product features, using Jinja2 templates, HTML, and CSS.</p>
+        <p> Tech Stack:FastAPI, Python, Jinja2 Templates, HTML, CSS, JSON (for data storage), Uvicorn.</p>
+        <a href="https://github.com/vamsiaraveti07/E-commerce" target="_blank">View GitHub →</a>
+      </article>
+      <article class="project-card">
+        <h3>GoTogether– Carpooling Web Platform </h3>
+        <p>Smart web-based carpooling system that connects daily commuters,
+          reduces fuel consumption and carbon emissions, and promotes environmentally friendly shared transport through
+          real-time ride booking and emission tracking</p>
+        <a href="https://github.com/vamsiaraveti07/GoTogether-Smart-Carpooling-System-" target="_blank">View GitHub →</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== CERTIFICATIONS & ACHIEVEMENTS ===== -->
+  <section id="certifications">
+    <h2>Certifications & Achievements</h2>
+    <div class="cert-gallery">
+      <figure class="cert-card">
+        <img src="images/learnpython.png" alt="Certificate 1">
+        <figcaption>Learn Python – CodeChef</figcaption>
+      </figure>
+      <figure class="cert-card">
+        <img src="images/learnjava.png" alt="Certificate 2">
+        <figcaption>Learn Java – CodeChef</figcaption>
+      </figure>
+      <figure class="cert-card">
+        <img src="images/cousrera.png" alt="Certificate 3">
+        <figcaption> Developing AI Applications on Azure - Coursera</figcaption>
+      </figure>
+      <figure class="cert-card">
+        <img src="images/oraccle.png" alt="Certificate 3">
+        <figcaption> Oracle Cloud Infrastructure 2023 Certified Data Science Professional </figcaption>
+      </figure>
+      <figure class="cert-card">
+        <img src="images/microsoft.png" alt="Certificate 3">
+        <figcaption>  Deploy and manage Azure compute
+          resources- Microsoft</figcaption>
+      </figure>
+      <figure class="cert-card">
+        <img src="images/NPTEL.png" alt="Certificate 3">
+        <figcaption>SoftSkils - NPTEL</figcaption>
+      </figure>
+      <!-- Add more certificates as needed -->
+    </div>
+  </section>
+
+  <!-- ===== ACADEMIC EXPERIENCE ===== -->
+  <section id="academic">
+    <h2>Academic Experience</h2>
+    <div class="timeline">
+      
+      <div class="timeline-item">
+        <img src="images/kalasalingam.png" alt="College Logo" class="tl-logo" />
+        <div class="tl-content">
+          <span class="tl-date">2022 - Present</span>
+          <h3>B.Tech CSE – CGPA 7.94(upto 6th Sem)</h3>
+          <p> KALASALINGAM ACADEMY OF RESEARCH AND EDUCATION, Tamil nadu, India</p>
+        </div>
+      </div>
+  
+      <div class="timeline-item">
+        <img src="images/chaithnyaa.jpg" alt="Intermediate Logo" class="tl-logo" />
+        <div class="tl-content">
+          <span class="tl-date">2020 - 2022</span>
+          <h3>Intermediate – 674 / 1000</h3>
+          <p>Mathematics, Physics, Chemistry</p>
+          <p>SRI CHAITANYA JUNIOR COLLEGE, Tirupati, Andhra Pradesh, India</p>
+        </div>
+      </div>
+  
+      <div class="timeline-item">
+        <img src="images/school.png" alt="School Logo" class="tl-logo" />
+        <div class="tl-content">
+          <span class="tl-date">2020</span>
+          <h3>High School – 575 / 600</h3>
+          <p>SRI SHIRIDI SAI HIGH SCHOOL, Duvvur, YSR Kadapa, Andhra Pradesh</p>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+  
+
+  <!-- ===== RESUME ===== -->
+  <section id="resume">
+    <h2>Resume</h2>
+    <p>You can download my latest resume here:</p>
+    <a class="btn" href="images/Araveti_Vamsi_Resume.pdf" download>Download PDF</a>
+  </section>
+
+  <!-- ===== LANGUAGES KNOWN ===== -->
+<section id="languages" class="languages-section">
+  <h2>Languages Known</h2>
+  <div class="languages-list">
+    <span>English</span>
+    <span>Telugu</span>
+
+  </div>
+</section>
+
+<!-- ===== TECH STACK / TOOLS ===== -->
+<section id="tools" class="tools-section">
+  <h2>Tools Used</h2>
+  <div class="tools-grid">
+    <div class="tool-card">
+      <img src="images/OIP (1).webp" alt="HTML5">
+      <span>VS CODE</span>
+    </div>
+    <div class="tool-card">
+      <img src="images/git.jpg" alt="CSS3">
+      <span>GIT</span>
+    </div>
+    <div class="tool-card">
+      <img src="images/github.webp" alt="JavaScript">
+      <span>GITHUB</span>
+    </div>
+    <div class="tool-card">
+      <img src="images/ms office.webp" alt="VS Code">
+      <span>MS OFFICE</span>
+    </div>
+    <div class="tool-card">
+      <img src="images/canva.webp" alt="VS Code">
+      <span>CANVA</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EXTRA-CURRICULAR ACTIVITIES ===== -->
+<section id="certifications">
+  <h2>EXTRA-CURRICULAR ACTIVITIES</h2>
+  <div class="cert-gallery">
+    <figure class="cert-card">
+      <img src="images/24 hrs Hackthon.jpg" alt="Certificate 1">
+      <figcaption>24 Hours Hackthon  – Microsoft Learn Student Chapter, KARE</figcaption>
+    </figure>
+    <figure class="cert-card">
+      <img src="images/Anna University .jpg" alt="Certificate 2">
+      <figcaption>Project Expo - Anna University, Madurai</figcaption>
+    </figure>
+    <figure class="cert-card">
+      <img src="images/GFG GEEK FEST.jpg" alt="Certificate 3">
+      <figcaption> Geek Fest 2023 - GeeksforGeeks Student Chapter, KARE</figcaption>
+    </figure>
+    <figure class="cert-card">
+      <img src="images/Iot .jpg" alt="Certificate 3">
+      <figcaption> Iot Ideathon 2.0 - CSE Dept, KARE </figcaption>
+    </figure>
+    <figure class="cert-card">
+      <img src="images/NAture culb craft.jpg" alt="Certificate 3">
+      <figcaption>  FIESTA Craft - Nature Culb, KARE </figcaption>
+    </figure>
+    <figure class="cert-card">
+      <img src="images/eating challenge .jpg" alt="Certificate 3">
+      <figcaption>Eating challenge -Nature Culb, KARE </figcaption>
+    </figure>
+    <figure class="cert-card">
+      <img src="images/traditional walk.jpg" alt="Certificate 3">
+      <figcaption>Traditional Walk -Nature Culb, KARE </figcaption>
+    </figure>
+    <!-- Add more certificates as needed -->
+  </div>
+</section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact-modern">
+    <div class="contact-container">
+  
+      <!-- Left Image Panel -->
+      <div class="image-left"></div>
+  
+      <!-- Center Vertical Name -->
+      <!-- Vertical Name Column -->
+<div class="name-columns">
+  
+  <div class="column">A<br>V<br></div>
+</div>
+
+  
+      <!-- Right Image Panel -->
+      <div class="image-right"></div>
+  
+      <!-- Contact Form Section -->
+      <div class="contact-content">
+        <h2>Contact Me</h2>
+        <div class="contact-info">
+          <div><strong>Phone:</strong> +91 8074494582</div>
+          <div><strong>Email:</strong> vamsiaraveti4444@gmail.com</div>
+        </div>
+  
+        <form class="contact-form" id="contact-form"> 
+          <input type="text" name="name" placeholder="Name" required />
+          <input type="email" name="email" placeholder="Email" required />
+          <textarea name="message" placeholder="Message" rows="5" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+  
+        <div class="contact-socials">
+          <a href="https://github.com/vamsiaraveti07"><img src="images/github_PNG80.png"> GitHub</a>
+          <a href="https://www.linkedin.com/in/araveti-vamsi-058670268/"><img src="images/li.png"> LinkedIn</a>
+          <a href="https://www.instagram.com/vamsi_.gaadu/"><img src="images/Instagram-Logo-PNG-Image-1.png"> Instagram</a>
+          <a href="https://www.geeksforgeeks.org/user/aravetivamsi/"><img src="images/gfg.png"> GeeksforGeeks</a>
+          <a href="https://www.hackerrank.com/profile/vamsiaraveti4444"><img src="images/160_Hackerrank_logo_logos-1024.webp"> HackerRank</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="modern-footer">
+    <div class="footer-container">
+      <p>© 2025 <strong>Vamsi Araveti</strong>. All rights reserved.</p>
+    </div>
+  </footer>
+  
+
+  <!-- ===== JS: ScrollReveal ===== -->
+ <!-- ScrollReveal + EmailJS Combined -->
+<script src="https://cdn.jsdelivr.net/npm/scrollreveal"></script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+
+<script>
+  // ScrollReveal setup
+  const sr = ScrollReveal({ distance: '60px', duration: 1000, delay: 200, reset: true });
+
+  /* Hero */
+  sr.reveal('.hero-content h1', { origin: 'top' });
+  sr.reveal('.hero-content p', { origin: 'bottom', delay: 300 });
+  sr.reveal('.hero-content .btn', { origin: 'bottom', delay: 400 });
+
+  /* About */
+  sr.reveal('#about h2', { origin: 'top' });
+  sr.reveal('.about-container img', { origin: 'left' });
+  sr.reveal('.about-container p', { origin: 'right', delay: 300 });
+
+  /* Skills */
+  sr.reveal('#skills h2', { origin: 'top' });
+  sr.reveal('.skill', { interval: 150, origin: 'bottom' });
+
+  /* Projects */
+  sr.reveal('#projects h2', { origin: 'top' });
+  sr.reveal('.project-card', { interval: 200, origin: 'bottom' });
+
+  /* Certifications */
+  sr.reveal('#certifications h2', { origin: 'top' });
+  sr.reveal('.cert-card', { interval: 200, origin: 'bottom' });
+
+  /* Academic */
+  sr.reveal('#academic h2', { origin: 'top' });
+  sr.reveal('.timeline-item', { interval: 200, origin: 'bottom' });
+
+  /* Resume */
+  sr.reveal('#resume h2', { origin: 'top' });
+  sr.reveal('#resume .btn', { origin: 'bottom', delay: 300 });
+
+  /* Contact */
+  sr.reveal('#contact h2', { origin: 'top' });
+  sr.reveal('.contact-form', { origin: 'left' });
+  sr.reveal('.social-icons', { origin: 'right', delay: 400 });
+
+  // EmailJS init
+  (function () {
+    emailjs.init("vGHTE6NpGlVt4H87O"); 
+  })();
+
+  // EmailJS form submission
+  document.getElementById('contact-form').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    emailjs.sendForm('service_6ox633y', 'template_a5qwzcf', this)
+      .then(function () {
+        alert("✅ Message sent successfully!");
+      }, function (error) {
+        alert("❌ Failed to send. Error: " + JSON.stringify(error));
+      });
+  });
+</script>
+
+</body>
+</html>
